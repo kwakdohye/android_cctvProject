@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toTopOf="@id/bottomView"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!--layout_constraintTop_toTopOf 상단 라인을 어떤 객체의 상단 라인에 배치-->
+    <!--layout_constraintBottom_toTopOf 하단 라인을 어떤 객체의 상단 라인에 배치-->
+
+    <ImageView
+        android:id="@+id/imgSos"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/soscall" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--                <Spinner-->
+            <!--                    android:id="@+id/spinner1"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:prompt="@string/spinner_title"-->
+            <!--                    android:textColor="@color/black" />-->
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="위성지도"
+                android:textOn="위성지도" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="구글지도"
+                android:textOn="구글지도" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/maps"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"></fragment>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/btnAmbul"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:gravity="center">
+            <!--작은원-->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/circle1_control"
+                android:foreground="?attr/selectableItemBackground"/>
+            <!--centerHorizontal = "true" 수평으로 중앙에 배치-->
+
+            <!--이미지뷰-->
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ambulance" />
+        </RelativeLayout>
+        <!--android:adjustViewBounds = "true" 이미지 뷰의 크기를 이미지에 맞게 조정-->
+        <!--android:scaleType = "fitCenter" 이미지를 가운데에 맞추고 비율을 유지하면서 뷰에 맞게 크기 조정-->
+
+        <RelativeLayout
+            android:id="@+id/btnPolice"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:gravity="center">
+            <!--작은원-->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/circle2_control"
+                android:foreground="?attr/selectableItemBackground" />
+            <!--이미지뷰-->
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/police" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/btnFire"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+            <!--작은원-->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/circle3_control"
+                android:foreground="?attr/selectableItemBackground"/>
+            <!--이미지뷰-->
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fire" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

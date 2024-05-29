@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--클릭하면 색상을 변경해줌-->
+    <item android:color="#D0303030" android:state_checked="false" />
+    <item android:color="#13223C" android:state_checked="true" />
+</selector>

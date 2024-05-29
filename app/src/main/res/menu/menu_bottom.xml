@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnHome"
+        android:title="홈"
+        android:icon="@drawable/home"
+        android:enabled="true" />
+    <!--android:enabled="true" 기본값이라 추가하지 않아도됨-->
+
+    <item
+        android:id="@+id/btnLaw"
+        android:title="법률"
+        android:icon="@drawable/law"
+        android:enabled="true"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/btnCert"
+        android:title="자격증"
+        android:icon="@drawable/certificate"
+        android:enabled="true"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/btnGoo"
+        android:title="지도"
+        android:icon="@drawable/map"
+        android:enabled="true"
+        android:checked="true"/>
+</menu>

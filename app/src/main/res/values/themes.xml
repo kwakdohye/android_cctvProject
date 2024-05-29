@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Project_CCTV" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--Spinner 텍스트 색상-->
+        <item name ="android:textColor">@color/black</item>
+    </style>
+
+    <!--자식테마인 AppTheme-->
+    <style name="Theme.Project_CCTV" parent="Base.Theme.Project_CCTV" />
+
+    <!--BottomView에만 적용할 스타일-->
+    <style name="BottomNavigationViewStyle" parent="">
+        <item name="android:textAppearance">@style/BottomText</item>
+    </style>
+
+    <!--BottomText 스타일 정의-->
+    <style name="BottomText" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">3sp</item>
+    </style>
+
+
+
+</resources>
